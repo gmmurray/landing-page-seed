@@ -3,11 +3,12 @@ import '../styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 import { Fragment } from 'react';
-import Head from 'next/head';
+import { GoogleAnalytics } from 'nextjs-google-analytics';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
+      <GoogleAnalytics trackPageViews />
       <DefaultSeo
         title="Welcome"
         titleTemplate="%s | Landing Page Seed"
